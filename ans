@@ -1,0 +1,63 @@
+
+
+**Question 1:** Create a function that removes strings from a list of non-negative integers and strings.
+
+```python
+def filter_list(lst):
+    return [x for x in lst if isinstance(x, int)]
+
+# Test cases
+print(filter_list([1, 2, "a", "b"]))  # ➞ [1, 2]
+print(filter_list([1, "a", "b", 0, 15]))  # ➞ [1, 0, 15]
+print(filter_list([1, 2, "aasf", "1", "123", 123]))  # ➞ [1, 2, 123]
+```
+
+**Question 2:** Create a function that reverses a string and changes the case of each character.
+
+```python
+def reverse(s):
+    return s[::-1].swapcase()
+
+# Test cases
+print(reverse("Hello World"))  # ➞ "DLROw OLLEh"
+print(reverse("ReVeRsE"))  # ➞ "eSrEvEr"
+print(reverse("Radar"))  # ➞ "RADAr"
+```
+
+**Question 3:** Unpack a list into three variables, `first`, `middle`, and `last`.
+
+```python
+writeyourcodehere = [1, 2, 3, 4, 5, 6]
+first, *middle, last = writeyourcodehere
+print(first)  # ➞ 1
+print(middle)  # ➞ [2, 3, 4, 5]
+print(last)  # ➞ 6
+```
+
+**Question 4:** Write a function to calculate the factorial of a number recursively.
+
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# Test cases
+print(factorial(5))  # ➞ 120
+print(factorial(3))  # ➞ 6
+print(factorial(1))  # ➞ 1
+print(factorial(0))  # ➞ 1
+```
+
+**Question 5:** Write a function that moves all elements of one type to the end of the list.
+
+```python
+def move_to_end(lst, element):
+    return [x for x in lst if x != element] + [x for x in lst if x == element]
+
+# Test cases
+print(move_to_end([1, 3, 2, 4, 4, 1], 1))  # ➞ [3, 2, 4, 4, 1, 1]
+print(move_to_end([7, 8, 9, 1, 2, 3, 4], 9))  # ➞ [7, 8, 1, 2, 3, 4, 9]
+print(move_to_end(["a", "a", "a", "b"], "a"))  # ➞ ["b", "a", "a", "a"]
+`
